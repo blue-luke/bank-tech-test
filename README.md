@@ -19,7 +19,7 @@ Create a bank account:
 > my_bank_account = new Account()
 ```
 
-Add a transaction, in the format 'DD/MM/YYY:[credit]:[debit]'. Credit and debit amounts must be to 2 decimal places:
+Add a transaction, in the format 'DD/MM/YYYY:[credit]:[debit]'. Credit and debit amounts must be to 2 decimal places:
 ```
 > my_bank_account.transaction('10/01/2023:1000.00:0.00')
 ```

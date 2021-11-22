@@ -2,7 +2,9 @@ class Account {
 
   constructor() {
     this.balance = 0.00
-    this.transaction_record = 'date || credit || debit || balance'
+    this.column_headings = 'date || credit || debit || balance'
+    this.transaction_record = this.column_headings
+    this.column_headings_length = this.column_headings.length
   }
 
   transaction(input_data) {
@@ -21,24 +23,19 @@ class Account {
   }
 
   update_transaction_record(date, credit_amount, debit_amount) {
-    // update transaction record
-    // complicated because 0.00 credit needs to be represented as an empty string when displayed, not as 0.00
-    if (credit_amount == 0.00) {
-      credit_amount = ''
-    } else {
-      credit_amount = String(credit_amount.toFixed(2)) + ' '
-    }
+    // amounts need to be formatted, because if they are 0.00, they should be displayed as an empty string, not as 0.00
+    credit_amount = this.format_amount(credit_amount)
+    debit_amount = this.format_amount(debit_amount)
 
-    if (debit_amount == 0.00) {
-      debit_amount = ''
-    } else {
-      debit_amount = String(debit_amount.toFixed(2)) + ' '
-    }
-
+    // this is the line to be added to the transaction record
     const new_transaction_line = `\n${date} || ${credit_amount}|| ${debit_amount}|| ${this.balance.toFixed(2)}`
 
     // insert the new transaction line after the column headings at index position 34 but before older transactions after index position 34
-    this.transaction_record = [this.transaction_record.slice(0, 34), new_transaction_line, this.transaction_record.slice(34)].join('')
+    this.transaction_record = [this.transaction_record.slice(0, this.column_headings_length), new_transaction_line, this.transaction_record.slice(this.column_headings_length)].join('')
+  }
+
+  format_amount(amount) {
+    return ( amount == 0.00 ? '' : String(amount.toFixed(2)) + ' ' )
   }
 
   print_statement() {
