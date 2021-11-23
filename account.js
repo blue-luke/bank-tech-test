@@ -8,7 +8,7 @@ class Account {
   }
 
   transaction(input_data) {
-    // extract and name data from the raw string input data
+    // extract and name data from the raw string input data which must be of the format 'DD/MM/YYYY:[credit]:[debit]'
     const output_data = input_data.split(':')
     const date = output_data[0]
     var credit_amount = parseInt(output_data[1])
@@ -30,7 +30,7 @@ class Account {
     // this is the line to be added to the transaction record
     const new_transaction_line = `\n${date} || ${credit_amount}|| ${debit_amount}|| ${this.balance.toFixed(2)}`
 
-    // insert the new transaction line after the column headings at index position 34 but before older transactions after index position 34
+    // insert the new transaction line after the column headings at index position 34 (this.column_headings_length = 34) but before older transactions after index position 34
     this.transaction_record = [this.transaction_record.slice(0, this.column_headings_length), new_transaction_line, this.transaction_record.slice(this.column_headings_length)].join('')
   }
 

@@ -1,6 +1,6 @@
 const Account = require('../account')
 
-// data entered as 'DD/MM/YYY:[credit]:[debit]'
+// data entered as 'DD/MM/YYYY:[credit]:[debit]'
 // t1 = transaction 1
 const t1 = '10/01/2023:1000.00:0.00'
 // returning data in defined format
