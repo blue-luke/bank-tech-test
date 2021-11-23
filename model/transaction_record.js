@@ -11,10 +11,14 @@ class TransactionRecord {
 		debit_amount = this.format_amount(debit_amount);
   
 		// this is the line to be added to the transaction record
-		const new_transaction_line = `\n${date} || ${credit_amount}|| ${debit_amount}|| ${balance.toFixed(2)}`;
-  
+		const new_transaction_line = this.format_transaction_line(date, credit_amount, debit_amount, balance);
+
 		// insert the new transaction line after the column headings at index position 34 (this.column_headings_length = 34) but before older transactions after index position 34
 		return this.statement = [this.statement.slice(0, this.column_headings_length), new_transaction_line, this.statement.slice(this.column_headings_length)].join('');
+	}
+
+	format_transaction_line(date, credit_amount, debit_amount, balance) {
+		return `\n${date} || ${credit_amount}|| ${debit_amount}|| ${balance.toFixed(2)}`;
 	}
 
 	format_amount(amount) {
