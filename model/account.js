@@ -1,4 +1,4 @@
-const TransactionRecord = require("./transaction_record");
+const TransactionRecord = require('../model/transaction_record');
 
 class Account {
 
