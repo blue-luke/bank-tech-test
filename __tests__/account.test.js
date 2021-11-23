@@ -1,8 +1,9 @@
-const Account = require('../account')
+const Account = require('../model/account')
 
-// data entered as 'DD/MM/YYYY:[credit]:[debit]'
+// data entered as 'DD/MM/YYY:[credit]:[debit]'
 // t1 = transaction 1
 const t1 = '10/01/2023:1000.00:0.00'
+
 // returning data in defined format
 // r1 = return value 1
 const r1 = 'date || credit || debit || balance\n10/01/2023 || 1000.00 || || 1000.00'

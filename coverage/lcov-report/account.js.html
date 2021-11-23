@@ -25,28 +25,28 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>18/18</span>
+                <span class='fraction'>16/16</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>6/6</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>18/18</span>
+                <span class='fraction'>16/16</span>
             </div>
         
             
@@ -103,13 +103,20 @@
 <a name='L44'></a><a href='#L44'>44</a>
 <a name='L45'></a><a href='#L45'>45</a>
 <a name='L46'></a><a href='#L46'>46</a>
-<a name='L47'></a><a href='#L47'>47</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -128,81 +135,86 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">class Account {
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">const TransactionRecord = require("./transaction_record");
 &nbsp;
-  constructor() {
-    this.balance = 0.00
-    this.column_headings = 'date || credit || debit || balance'
-    this.transaction_record = this.column_headings
-    this.column_headings_length = this.column_headings.length
-  }
+class Account {
 &nbsp;
-  transaction(input_data) {
-    // extract and name data from the raw string input data which must be of the format 'DD/MM/YYYY:[credit]:[debit]'
-    const output_data = input_data.split(':')
-    const date = output_data[0]
-    var credit_amount = parseInt(output_data[1])
-    var debit_amount = parseInt(output_data[2])
+	constructor() {
+		this.balance = 0.00;
+		this.column_headings = 'date || credit || debit || balance';
+		this.transaction_record = this.column_headings;
+		this.column_headings_length = this.column_headings.length;
+		this.transaction_record = new TransactionRecord()
+	}
 &nbsp;
-    this.update_balance(credit_amount, debit_amount)
-    this.update_transaction_record(date, credit_amount, debit_amount)
-  }
+	transaction(input_data) {
+		// extract and name data from the raw string input data which must be of the format 'DD/MM/YYYY:[credit]:[debit]'
+		const output_data = input_data.split(':');
+		const date = output_data[0];
+		var credit_amount = parseInt(output_data[1]);
+		var debit_amount = parseInt(output_data[2]);
 &nbsp;
-  update_balance(credit_amount, debit_amount) {
-    this.balance = this.balance + credit_amount - debit_amount
-  }
+		this.update_balance(credit_amount, debit_amount);
+		this.update_transaction_record(date, credit_amount, debit_amount);
+	}
 &nbsp;
-  update_transaction_record(date, credit_amount, debit_amount) {
-    // amounts need to be formatted, because if they are 0.00, they should be displayed as an empty string, not as 0.00
-    credit_amount = this.format_amount(credit_amount)
-    debit_amount = this.format_amount(debit_amount)
+	update_balance(credit_amount, debit_amount) {
+		this.balance = this.balance + credit_amount - debit_amount;
+	}
 &nbsp;
-    // this is the line to be added to the transaction record
-    const new_transaction_line = `\n${date} || ${credit_amount}|| ${debit_amount}|| ${this.balance.toFixed(2)}`
+	update_transaction_record(date, credit_amount, debit_amount) {
+		this.transaction_record.update(date, credit_amount, debit_amount, this.balance)
+		// // amounts need to be formatted, because if they are 0.00, they should be displayed as an empty string, not as 0.00
+		// credit_amount = this.format_amount(credit_amount);
+		// debit_amount = this.format_amount(debit_amount);
 &nbsp;
-    // insert the new transaction line after the column headings at index position 34 (this.column_headings_length = 34) but before older transactions after index position 34
-    this.transaction_record = [this.transaction_record.slice(0, this.column_headings_length), new_transaction_line, this.transaction_record.slice(this.column_headings_length)].join('')
-  }
+		// // this is the line to be added to the transaction record
+		// const new_transaction_line = `\n${date} || ${credit_amount}|| ${debit_amount}|| ${this.balance.toFixed(2)}`;
 &nbsp;
-  format_amount(amount) {
-    return ( amount == 0.00 ? '' : String(amount.toFixed(2)) + ' ' )
-  }
+		// // insert the new transaction line after the column headings at index position 34 (this.column_headings_length = 34) but before older transactions after index position 34
+		// this.transaction_record = [this.transaction_record.slice(0, this.column_headings_length), new_transaction_line, this.transaction_record.slice(this.column_headings_length)].join('');
+	}
 &nbsp;
-  print_statement() {
-    return this.transaction_record
-  }
+	// format_amount(amount) {
+	// 	return ( amount == 0.00 ? '' : String(amount.toFixed(2)) + ' ' );
+	// }
+&nbsp;
+	print_statement() {
+		return this.transaction_record;
+	}
 &nbsp;
 }
 &nbsp;
-module.exports = Account</pre></td></tr></table></pre>
+module.exports = Account;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Tue Nov 23 2021 10:28:14 GMT+0000 (Greenwich Mean Time)
+                at Tue Nov 23 2021 11:36:30 GMT+0000 (Greenwich Mean Time)
             </div>
         </div>
         <script src="prettify.js"></script>
