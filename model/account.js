@@ -23,7 +23,7 @@ class Account {
 	}
 
 	update_transaction_record(date, credit_amount, debit_amount) {
-		this.transaction_record.update(date, credit_amount, debit_amount, this.balance)
+		this.transaction_record.update(date, credit_amount, debit_amount, this.balance);
 	}
 
 	print_statement() {
