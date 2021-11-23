@@ -2,9 +2,9 @@ const TransactionRecord = require("./transaction_record");
 
 class Account {
 
-	constructor() {
+	constructor(injected_transaction_record = TransactionRecord) {
 		this.balance = 0.00;
-		this.transaction_record = new TransactionRecord();
+		this.transaction_record = new injected_transaction_record();
 	}
 
 	transaction(input_data) {
