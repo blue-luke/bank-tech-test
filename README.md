@@ -28,6 +28,8 @@ https://youtu.be/byBeK5XEKgM
 
 ## How to use
 
+Download code and run npm install to acquire dependencies.
+
 Below is how to interact with the code in a repl. It duplicates what the automated tests accomplish.
 
 Open account.js in a javascript runtime environment such as node:
@@ -53,8 +55,10 @@ Print your bank statement:
 
 ## How to test
 
+There are 4 tests, all passing in Jest and with high coverage. I used ESlint for linting in JS.
+
 ```
-$ npm install jest
 $ jest
+$ jest --coverage
 ```
 
