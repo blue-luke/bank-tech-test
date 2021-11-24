@@ -62,3 +62,6 @@ $ jest
 $ jest --coverage
 ```
 
+## Next steps
+
+I would extract further classes, including a transaction class (perhaps further broken down into a credit class and a debit class) and a balance class. I would also decompose the transaction method into a credit method and a debit method.
