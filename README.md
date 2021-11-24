@@ -15,7 +15,7 @@ See bank_tech_test.md for overview of the initial task
 - I used dependency injection to allow for an injected_transaction_record (see lines 5 and 7 in account.js).
 - In account.js, the injected_transaction_record is TransactionRecord.
 - In account.test.js, the injected_transaction_record is TransactionRecordDummy.
-- The functionality of TransactionRecordDummy is a copy of TransactionRecord currently. However, this still achieves test isolation, because future changes to ---- TransactionRecord will have no impact on TransactionRecordDummy and therefore no impact on accout.test.js.
+- The functionality of TransactionRecordDummy is a copy of TransactionRecord currently. However, this still achieves test isolation, because future changes to TransactionRecord will have no impact on TransactionRecordDummy and therefore no impact on account.test.js.
 
 ## How to see
 
