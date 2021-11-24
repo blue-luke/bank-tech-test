@@ -17,6 +17,15 @@ In account.js, the injected_transaction_record is TransactionRecord.
 In account.test.js, the injected_transaction_record is TransactionRecordDummy.
 The functionality of TransactionRecordDummy is a copy of TransactionRecord currently. However, this still achieves test isolation, because future changes to TransactionRecord will have no impact on TransactionRecordDummy and therefore no impact on accout.test.js.
 
+## How to see
+
+For an image of code being interacted with via repl, see:
+./screenshot.png
+
+For a video, see:
+https://youtu.be/byBeK5XEKgM
+
+
 ## How to use
 
 Below is how to interact with the code in a repl. It duplicates what the automated tests accomplish.

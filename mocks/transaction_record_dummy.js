@@ -1,3 +1,4 @@
+/* eslint-disable no-mixed-spaces-and-tabs */
 class TransactionRecordDummy{
 	constructor() {
 		this.column_headings = 'date || credit || debit || balance';
