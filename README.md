@@ -20,7 +20,7 @@ The functionality of TransactionRecordDummy is a copy of TransactionRecord curre
 ## How to see
 
 For an image of code being interacted with via repl, see:
-./screenshot.png
+![Screenshot](screenshot.png)
 
 For a video, see:
 https://youtu.be/byBeK5XEKgM
